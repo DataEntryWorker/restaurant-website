@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Golden Restaurant</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fffaf2;
+  color: #30251f;
+  line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+  background: #302019;
+  color: white;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+header h2 {
+  color: #f5ad42;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 8px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #f5ad42;
+}
+
+/* HERO */
+
+.hero {
+  background:
+  linear-gradient(rgba(0,0,0,.6),
+  rgba(0,0,0,.6)),
+  url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200");
+
+  background-size: cover;
+  background-position: center;
+  min-height: 420px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 19px;
+  margin-bottom: 25px;
+}
+
+/* BUTTONS */
+
+button, .main-button {
+  background: #e99b32;
+  color: #24170e;
+  border: none;
+  padding: 13px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+button:hover, .main-button:hover {
+  background: #f5ad42;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+  padding: 55px 6%;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.section-description {
+  margin-bottom: 30px;
+  color: #777;
+}
+
+/* MENU */
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.food {
+  background: white;
+  width: 270px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.1);
+  transition: transform .3s;
+}
+
+.food:hover {
+  transform: translateY(-6px);
+}
+
+.food img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 9px;
+}
+
+.food h3 {
+  margin: 12px 0;
+}
+
+.food p {
+  color: #a45b1d;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.food button {
+  background: #25D366;
+  color: white;
+  width: 100%;
+}
+
+.food button:hover {
+  background: #128C7E;
+}
+
+/* ABOUT */
+
+.about {
+  background: #f5eadb;
+}
+
+/* CONTACT */
+
+.contact {
+  background: #fffaf2;
+}
+
+.contact p {
+  margin: 10px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #302019;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+/* MOBILE DESIGN */
+
+@media (max-width: 600px) {
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  .hero {
+    min-height: 350px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  section h2 {
+    font-size: 25px;
+  }
+
+  .food {
+    width: 100%;
+    max-width: 340px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <h2>Golden Restaurant</h2>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HOME -->
+
+<div class="hero" id="home">
+
+  <h1>Welcome to Golden Restaurant</h1>
+
+  <p>Delicious Food, Excellent Service!</p>
+
+  <a href="#menu" class="main-button">
+    Explore Our Menu
+  </a>
+
+</div>
+
+<!-- FOOD MENU -->
+
+<section id="menu">
+
+  <h2>Our Special Menu</h2>
+
+  <p class="section-description">
+    Fresh food made with love.
+  </p>
+
+  <div class="menu">
+
+    <!-- PIZZA -->
+
+    <div class="food">
+
+      <img
+      src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500"
+      alt="Special Pizza">
+
+      <h3>Special Pizza</h3>
+
+      <p>450 ETB</p>
+
+      <button onclick="orderFood('Special Pizza',450)">
+        Order on WhatsApp
+      </button>
+
+    </div>
+
+    <!-- BURGER -->
+
+    <div class="food">
+
+      <img
+      src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500"
+      alt="Chicken Burger">
+
+      <h3>Chicken Burger</h3>
+
+      <p>250 ETB</p>
+
+      <button onclick="orderFood('Chicken Burger',250)">
+        Order on WhatsApp
+      </button>
+
+    </div>
+
+    <!-- JUICE -->
+
+    <div class="food">
+
+      <img
+      src="https://images.unsplash.com/photo-1613478223719-2ab802602423?w=500"
+      alt="Fresh Juice">
+
+      <h3>Fresh Juice</h3>
+
+      <p>100 ETB</p>
+
+      <button onclick="orderFood('Fresh Juice',100)">
+        Order on WhatsApp
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+  <h2>About Our Restaurant</h2>
+
+  <p>
+    Welcome to Golden Restaurant.
+    We offer delicious meals, fresh drinks
+    and friendly customer service.
+    Visit us and enjoy your favorite food.
+  </p>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+  <h2>Contact Us</h2>
+
+  <p>Location: Tepi, Ethiopia</p>
+
+  <p>Phone: +251 948901917</p>
+
+  <p>Opening Hours: 8:00 AM - 10:00 PM</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>© 2026 Golden Restaurant</p>
+
+  <p>All Rights Reserved.</p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function orderFood(foodName, price) {
+
+  // Replace this example with the restaurant's number
+  const phone = "+251948901917";
+
+  const message =
+    "Hello Golden Restaurant! I want to order "
+    + foodName
+    + ". Price: "
+    + price
+    + " ETB.";
+
+  const url =
+    "https://wa.me/"
+    + phone
+    + "?text="
+    + encodeURIComponent(message);
+
+  window.location.href = url;
+
+}
+
+</script>
+
+</body>
+</html>
